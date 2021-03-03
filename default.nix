@@ -8,4 +8,5 @@ in
   zammad = pkgs.callPackage ./zammad {
     ruby = pkgs.ruby_2_6;
   };
+  zammad-test = import ./test.nix { inherit pkgs; };
 }
