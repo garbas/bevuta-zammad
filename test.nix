@@ -25,7 +25,7 @@ makeTest {
     # without the grep the command does not produce valid utf-8 for some reason
     with subtest("welcome screen loads"):
         machine.succeed(
-            "curl -sSfL http://localhost:3000/ | grep '<title>Zammad'"
+            "curl -sSfL http://localhost:3000/ | grep '<title>Zammad Helpdesk</title>'"
         )
   '';
 }
