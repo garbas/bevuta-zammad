@@ -182,8 +182,6 @@ in {
     systemd.services.zammad-websocket = {
       after = [ "zammad-web.service" ];
       requires = [
-        "postgresql.service"
-        "zammad-setup.service"
         "zammad-web.service"
       ];
       description = "Zammad websocket";
@@ -201,8 +199,6 @@ in {
     systemd.services.zammad-scheduler = {
       after = [ "zammad-web.service" ];
       requires = [
-        "postgresql.service"
-        "zammad-setup.service"
         "zammad-web.service"
       ];
       description = "Zammad scheduler";
